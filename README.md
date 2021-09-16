@@ -1,11 +1,11 @@
 # Schedule_management
 # 開発環境について
 ## 開発について
-# 開発開始のコマンド
+### 開発開始のコマンド
 1. $docker-compose up --build -d #docker-compose.ymlを元にコンテナの作成 ※Creating schedule_management_app_1 ... done が出ればOK
 2. $docker-compose exec app bash #1.で作成されているコンテナ内に入る ※入っていると$root@<適当数字>:/Django になっている
 3. $pipenv install --system #pipenvで管理しているパッケージをコンテナ内に適用
-# 開発終了のコマンド
+### 開発終了のコマンド
 1. $exit #コンテナから出る ※コンテナ内なのかを確認
 2. $docker-compose down #コンテナ,イメージ,ボリュームの削除 ※やらないとコンテナ関係の残骸が溜まってPCの容量を食う
 3. $git add .
@@ -38,8 +38,8 @@ $git commit -m <コメント> #ステージに上がっている変更を確定 
 $git push origin <ブランチ名> #確定している変更を指定したブランチにpush
 
 ※git commit -m <コメント>について
-[add]・・・新規ファイル追加
 [update]・・・機能修正(バグ関係ではない)
+[add]・・・新規ファイル追加
 [fix]・・・バグ修正
 [remove]・・・削除(ファイル)
 例：$git commit -m "[update] カレンダー機能の追加"　$git commit -m "[add] 開発環境の構築"
