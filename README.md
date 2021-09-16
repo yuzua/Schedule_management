@@ -44,7 +44,7 @@ $git push origin <ブランチ名> #確定している変更を指定したブ�
 [remove]・・・削除(ファイル)
 例：$git commit -m "[update] カレンダー機能の追加"　$git commit -m "[add] 開発環境の構築"
 ```
-## GitHubのbranhについて
+## GitHubのbranchについて
 - main #デプロイ用
     - hotfix #リリース,デプロイ後のバグ修正
     - develop #開発用
