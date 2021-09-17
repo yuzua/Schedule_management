@@ -60,3 +60,5 @@ $git push origin <ブランチ名> #確定している変更を指定したブ�
         - feature #機能作成時に使用
         - release #リリース,デプロイの準備用
         - bugfix #開発中に見つけたバグを修正
+
+        iram 
