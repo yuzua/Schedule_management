@@ -2,13 +2,14 @@
 # 開発環境について
 ## 開発について
 ### 開発開始のコマンド
-1. $docker-compose up --build -d
+1. git pull remote <ブランチ名>
+2. $docker-compose up --build -d
 #docker-compose.ymlを元にコンテナの作成 
 ※Creating schedule_management_app_1 ... done が出ればOK
-2. $docker-compose exec app bash 
+3. $docker-compose exec app bash 
 #1.で作成されているコンテナ内に入る 
 ※入っていると$root@<適当数字>:/Django になっている
-3. $pipenv install --system 
+4. $pipenv install --system 
 #pipenvで管理しているパッケージをコンテナ内に適用
 ### 開発終了のコマンド
 1. $exit #コンテナから出る 
@@ -17,7 +18,7 @@
 #コンテナ,イメージ,ボリュームの削除 
 ※やらないとコンテナ関係の残骸が溜まってPCの容量を食う
 3. $git add .
-4. $git commit -m [<コメント>]
+4. $git commit -m <コメント>
 5. $git push origin <ブランチ名>
 6. GitHubからpull requestを出す
 ## Dockerのコマンド
@@ -30,7 +31,7 @@ $docker images #コンテナのイメージ一覧を表示
 ```
 ## Pipenvのコマンド
 ```
-$pipenv install <パッケージ> #パッケージをインストールする時 ※pip install <パッケージ>　とやっていることは同じ
+$pipenv install <パッケージ> #パッケージをインストールする時 ※pip install <パッケージ> とやっていることは同じ
 $pipenv install --system #pipenvが持っているパッケージをローカルに全てインストール
 $pipenv shell #仮想環境に入る ※VSCodeのshellの所がpipenvになっていればOK
 $exit #pipenvの仮想環境から出る
